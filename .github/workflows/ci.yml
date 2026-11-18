@@ -1,0 +1,15 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  stress-detector:
+    name: Stress detector — golden model + RTL simulation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install numpy pytest
+      - run: sudo apt-get update && sudo apt-get install -y iverilog
+      - run: make -C stress-detector test
+      - run: make -C stress-detector sim
