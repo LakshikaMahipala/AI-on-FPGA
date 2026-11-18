@@ -1,3 +1,5 @@
+> **Note:** this is the original v0 write-up. Its hardware section describes the first prototype, which had the issues listed in the [README](../README.md#what-was-wrong-in-v0); the current design replaces it.
+
 # **🧠 Real-Time Facial Stress Detection on FPGA**
 
 This is a complete, from-scratch hardware AI project that shows how to train a deep learning model to detect **stress from facial expressions**, then **run the model in real-time on an actual FPGA** 💡 — no cloud, no GPU, just pure hardware intelligence.
